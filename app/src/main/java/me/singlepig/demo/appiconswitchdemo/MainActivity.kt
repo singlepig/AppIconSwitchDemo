@@ -6,6 +6,8 @@ import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import java.text.SimpleDateFormat
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,8 +18,26 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<FloatingActionButton>(R.id.fab).setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
+                .setAction("Action", null).show()
         }
+
+        val formatter = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+
+        // 添加切换图标的任务
+        LauncherIconManager.instance.addTask(
+            SwitchIconTask(
+                MainActivity::class.java.name,
+                "$packageName.vip618",
+                formatter.parse("2020-06-17")!!.time,
+                formatter.parse("2020-06-19")!!.time
+            ),
+            SwitchIconTask(
+                MainActivity::class.java.name,
+                "$packageName.vip11",
+                formatter.parse("2020-11-10")!!.time,
+                formatter.parse("2020-11-12")!!.time
+            )
+        )
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

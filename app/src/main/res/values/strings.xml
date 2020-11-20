@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AppIconSwitchDemo</string>
+    <string name="app_name">图标切换Demo</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -7,7 +7,9 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="hello_first_fragment">系统时间设置在2020-06-17至2020-06-19之间会切换为618大促</string>
+    <string name="hello_second_fragment">系统时间设置在2020-11-10至2020-11-12之间会切换为双11大促</string>
 
+    <string name="vip11">11大促</string>
+    <string name="vip618">618大促</string>
 </resources>
